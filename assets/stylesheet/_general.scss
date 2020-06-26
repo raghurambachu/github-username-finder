@@ -1,0 +1,22 @@
+$font-family :'Nunito', sans-serif;
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    line-height: 1.6;
+    height: 100vh;
+    font-family: $font-family;
+}
+
+.flex{
+    display: flex;
+}
+
+img{
+    display: block;
+    object-fit: cover;
+}
+

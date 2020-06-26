@@ -1,0 +1,260 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.6;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+@media all and (max-width: 935px) {
+  .github-container {
+    flex-direction: column;
+  }
+  .github-container .left-side-container {
+    padding: 2.5rem 0;
+    border-right: 0;
+    height: 50vh;
+    border-bottom: 1px solid black;
+  }
+  .github-container .right-side-container {
+    width: 100%;
+  }
+}
+.left-side-container {
+  background-color: #b3caf5;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid black;
+  height: 100vh;
+}
+.left-side-container .search-title {
+  margin: 0rem 0 3rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.left-side-container img {
+  margin: 1rem auto;
+}
+.left-side-container .search-input {
+  padding: 0.5rem 1rem;
+  width: 280px;
+  outline: 0;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  font-family: "Nunito", sans-serif;
+  border: 1.5px solid rgba(0, 0, 0, 0.8);
+}
+.left-side-container .search-input:focus {
+  transition: border-bottom 200ms ease-in-out;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+}
+.left-side-container .search-group {
+  position: relative;
+  margin-top: -2rem;
+}
+.left-side-container .search-icon {
+  display: inline-block;
+  position: absolute;
+  left: 88%;
+  top: 64%;
+  cursor: pointer;
+}
+@media all and (max-width: 935px) {
+  .left-side-container {
+    width: 100%;
+  }
+}
+
+.right-side-container {
+  background-color: wheat;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 935px) {
+  .right-side-container {
+    height: 120vh;
+    align-items: flex-start;
+  }
+}
+.right-side-container .right-side-info-container {
+  padding: 1em;
+  height: 90vh;
+  width: 600px;
+}
+.right-side-container .right-side-info-container .avatar {
+  font-size: 0;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+}
+.right-side-container .right-side-info-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.right-side-container .right-side-info-container h3, .right-side-container .right-side-info-container h4, .right-side-container .right-side-info-container p {
+  text-align: center;
+}
+.right-side-container .right-side-info-container h3 {
+  font-size: 1.35rem;
+}
+.right-side-container .right-side-info-container h4 {
+  font-size: 1.2rem;
+}
+.right-side-container .right-side-info-container p {
+  margin: 0.5rem 0 0;
+}
+.right-side-container .right-side-info-container span {
+  margin: 0 1rem;
+}
+.right-side-container .right-side-bottom {
+  height: 45vh;
+  margin-top: 2rem;
+  overflow-y: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 0.3em;
+}
+@media all and (max-width: 935px) {
+  .right-side-container .right-side-bottom {
+    justify-content: center;
+  }
+}
+.right-side-container .right-side-bottom .card {
+  width: 48%;
+  align-self: flex-start;
+  justify-content: space-evenly;
+  padding: 0.5em;
+  align-items: center;
+  background: whitesmoke;
+  margin: 0.5rem 0;
+  border-radius: 0.3rem;
+  box-shadow: 2px 2px 4px lightslategray;
+}
+@media all and (max-width: 935px) {
+  .right-side-container .right-side-bottom .card {
+    width: 95%;
+    display: flex;
+  }
+}
+.right-side-container .right-side-bottom h3 {
+  font-size: 1.2rem;
+}
+.right-side-container .right-side-bottom img {
+  width: 80px;
+  height: 80px;
+}
+.right-side-container .right-side-bottom .card-repo {
+  width: 47.5%;
+  margin: 0.4rem 0;
+  padding: 0.25rem;
+  background: whitesmoke;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 4px lightslategray;
+}
+.right-side-container .right-side-bottom .card-repo div:first-child {
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid lightslategray;
+}
+.right-side-container .right-side-bottom .card-repo a {
+  text-decoration: none;
+}
+.right-side-container .right-side-bottom .card-repo h3 {
+  font-size: 0.95rem;
+}
+.right-side-container .right-side-bottom .card-repo h4 {
+  font-size: 0.8rem;
+}
+.right-side-container .right-side-bottom .card-repo p {
+  font-size: 0.75rem;
+}
+.right-side-container .right-side-bottom .card-repo span {
+  display: inline-block;
+}
+.right-side-container .right-side-bottom .card-repo img {
+  width: 18px;
+  height: 18px;
+}
+.right-side-container .right-side-bottom .card-repo .icons {
+  justify-content: center;
+}
+.right-side-container .right-side-bottom .card-repo .icon:hover {
+  opacity: 0.5;
+}
+@media all and (max-width: 935px) {
+  .right-side-container .right-side-bottom .card-repo {
+    width: 95%;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
