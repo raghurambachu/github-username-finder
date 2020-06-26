@@ -3,6 +3,7 @@ class GithubFinder{
         this.form_DOM = document.querySelector(".search-form");
         this.rightSideTop_DOM = document.querySelector(".right-side-top");
         this.rightSideBottom_DOM = document.querySelector(".right-side-bottom");
+        this.searchBtn_DOM = document.querySelector(".search-icon");
         this.data = "";
         this.handlerFunctions();
         
@@ -15,6 +16,14 @@ class GithubFinder{
             const username = e.currentTarget.querySelector("input").value;
             e.currentTarget.querySelector("input").value = "";
             this.createXmlRequest(username)
+        })
+
+        this.searchBtn_DOM.addEventListener("click",(e) => {
+            this.rightSideBottom_DOM.innerHTML = "";
+            let username_DOM = document.querySelector(".search-input");
+            let username = username_DOM.value;
+            username_DOM.value = "";
+            this.createXmlRequest(username);
         })
 
         document.body.addEventListener("click",(e) => {
